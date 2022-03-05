@@ -82,5 +82,55 @@ class Application(Frame):
         self.bsub.place(x=200, y=320)
         self.bsub.bind('<Button-1>', self.buttonClicksub)
 
+
     def buttonClicksub(self, master):
-        pass
+        self.fvote = Frame(self.f, height=745, width=1295, bg='white')
+        self.fvote.pack()
+
+        self.lb = Label(self.fvote, text='Voting System', width=50, height=1, font=('Helvetica', 36, 'bold italic'), fg='black',
+                   bg='green')
+        self.lb.place(x=0, y=0)
+
+        self.lbtitle = Label(self.fvote, text='Candidate List', height=1, font=('', 22, 'bold underline'), bg='white', fg='black')
+        self.lbtitle.place(x=180, y=100)
+
+        self.lbvote = Label(self.fvote, text='Vote', height=1, font=('', 22, 'bold underline'), bg='white', fg='black')
+        self.lbvote.place(x=950, y=100)
+
+        self.vargv = IntVar()
+
+        self.lb1 = Label(self.fvote, text='Java', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb1.place(x=200, y=180)
+
+        self.r1 = Radiobutton(self.fvote, variable=self.vargv, value=1, bg='white', fg='Black')
+        self.r1.place(x=970, y=180)
+
+        self.lb2 = Label(self.fvote, text='Python', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb2.place(x=200, y=260)
+
+        self.r2 = Radiobutton(self.fvote, variable=self.vargv, value=2, bg='white', fg='Black')
+        self.r2.place(x=970, y=260)
+
+        self.lb3 = Label(self.fvote, text='C++', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb3.place(x=200, y=340)
+
+        self.r3 = Radiobutton(self.fvote, variable=self.vargv, value=3, bg='white', fg='Black')
+        self.r3.place(x=970, y=340)
+
+        self.lb4 = Label(self.fvote, text='HTML', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb4.place(x=200, y=420)
+
+        self.r4 = Radiobutton(self.fvote, variable=self.vargv, value=4, bg='white', fg='Black')
+        self.r4.place(x=970, y=420)
+
+        self.lb5 = Label(self.fvote, text='R', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb5.place(x=200, y=500)
+
+        self.r5 = Radiobutton(self.fvote, variable=self.vargv, value=5, bg='white', fg='Black')
+        self.r5.place(x=970, y=500)
+
+        self.b6 = Label(self.fvote, text='JavaScript', height=1, font=('', 16, ''), bg='white', fg='black')
+        self.lb6.place(x=200, y=580)
+
+        self.r6 = Radiobutton(self.fvote, variable=self.vargv, value=6, bg='white', fg='Black')
+        self.r6.place(x=970, y=580)
