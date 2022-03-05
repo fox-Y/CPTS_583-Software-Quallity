@@ -95,13 +95,14 @@ def searchCandidate(can_name):
     cursor = connection.cursor()
     #Third step
     cursor.execute("select * from candidate_name where can_name = %s", can_name)
-    connection.commit()
+    rows = cursor.fetchall()
   except Error as e:
     print("Error while connecting to mySQL", e)
   finally:
     if connection.is_connected():
       cursor.close()
       connection.close()
+  return rows
 
 #Voter register
 def voterRegister(votername,gender,age,position,username,passcode):
@@ -164,7 +165,7 @@ def voterLogin():
       connection.close()
 
 #Administor login
-def adLogin():
+def adLogin(username,passcode):
   try:
     #First step
     connection = mysql.connector.connect(host='localhost',
@@ -174,11 +175,13 @@ def adLogin():
     #Second step
     cursor = connection.cursor()
     #Third step
-    cursor.execute("select database();")
-    connect.commit()
+    cursor.execute("select username,passcode from administrator_info where username=%s and passcode=%s",(username,passcode))
   except Error as e:
     print("Error while connecting to mySQL", e)
   finally:
     if connection.is_connected():
       cursor.close()
       connection.close()
+  return cursor.fetchone()
+
+
