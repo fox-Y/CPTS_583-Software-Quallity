@@ -144,28 +144,9 @@ def main():
                     elif not password_found:
                         print("Invalid password.")
                     else:
-                        logged_in = True
-                        lis = None
-                        state = None
-                        email = None
-                        cc = 0
-                        for i in range(indx, len(current_user)):
-                            if current_user[i] == ',' and cc == 0:
-                                cc = 1
-                                lis = current_user[indx:i]
-                                indx = i+1
-                                continue
-                            if current_user[i] == ',' and cc == 1:
-                                state = current_user[indx:i]
-                                cc = 2                            
-                                email = current_user[i+1:]
-                                break
-                        
+                        logged_in = True                        
                         #print("final username: ", username)
                         #print("final password: ", passw)
-                        #print("final lis: ", lis)
-                        #print("final state: ", state)
-                        #print("final email: ", email)
 
                         # 2FA
                         import smtplib, ssl
