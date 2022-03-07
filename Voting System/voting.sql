@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: voting
 Target Host: localhost
 Target Database: voting
-Date: 2022/3/5 0:09:22
+Date: 2022/3/6 17:54:47
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS `administrator_info`;
 CREATE TABLE `administrator_info` (
   `aid` int(10) NOT NULL AUTO_INCREMENT,
   `username` varchar(10) NOT NULL,
-  `passcode` int(10) NOT NULL,
+  `passcode` varchar(20) NOT NULL,
   PRIMARY KEY (`aid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -65,14 +65,15 @@ CREATE TABLE `voter_info` (
   `age` int(10) NOT NULL,
   `position` varchar(10) DEFAULT NULL,
   `username` varchar(20) NOT NULL,
-  `passcode` int(10) NOT NULL,
+  `passcode` varchar(20) NOT NULL,
   PRIMARY KEY (`vid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records 
 -- ----------------------------
 INSERT INTO `administrator_info` VALUES ('1', 'admin123', '123456');
-INSERT INTO `administrator_info` VALUES ('2', 'admin123', '123456');
-INSERT INTO `administrator_info` VALUES ('3', 'admin123', '123456');
-INSERT INTO `administrator_info` VALUES ('4', 'admin456', '123456');
+INSERT INTO `administrator_info` VALUES ('2', 'admin456', '123456');
+INSERT INTO `administrator_info` VALUES ('3', 'admin789', '123456');
+INSERT INTO `administrator_info` VALUES ('4', 'admin010', '123456');
+INSERT INTO `voter_info` VALUES ('1', 'Jacob', 'male', '29', 'Washington', 'kitty', '32467');
