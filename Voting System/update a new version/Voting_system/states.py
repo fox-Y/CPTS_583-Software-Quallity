@@ -1,6 +1,6 @@
 import MySQLdb as m
 
-db = m.connect(host = "localhost", user="root", passwd="mysql98", db="election")
+db = m.connect(host = "localhost", user="root", passwd="wsu12345", db="election")
 cur = db.cursor()
 
 cur.execute("Create table countvotes (name varchar(50), count int)")
