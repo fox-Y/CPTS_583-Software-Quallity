@@ -1,0 +1,23 @@
+#Sgn in MySQL:
+mysql -u root -p
+Xtx123456(password)
+
+#Create users
+create user 'admin1'@'host' identified by 'password'
+create user 'admin2'@'host' identified by 'password'
+create user 'admin3'@'host' identified by 'password'
+
+#Authentication
+grant all privileges on DB_Voting.* to 'admin1'@'host'
+grant all privileges on DB_Voting.* to 'admin2'@'host'
+grant all privileges on DB_Voting.* to 'admin3'@'host'
+
+#Sign in
+mysql -u admin1 -p
+password(password)
+
+mysql -u admin2 -p
+password(password)
+
+mysql -u admin3 -p
+password(password)
