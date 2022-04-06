@@ -17,6 +17,12 @@ can be employed to enhance the understanding of results.
 # Database
 MySQL
 
+# Follow the steps to run Voting System
+1. run database.py
+2. run states.py
+3. run table.py
+4. run main.py
+
 # Team Member
 Tengyang Zhang
 Tianxiang Xu
