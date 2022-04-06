@@ -14,6 +14,9 @@ voting results (e.g., the final votes each candidate received and the winning ca
 possibly the vote statistics by geographic locations or political regions) for which visualizations                         
 can be employed to enhance the understanding of results.
 
+# Database
+MySQL
+
 # Team Member
 Tengyang Zhang
 Tianxiang Xu
